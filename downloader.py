@@ -12,4 +12,5 @@ def download(dl_link):
     }
     with YoutubeDL(ydl_opts) as ydl:
         r = ydl.extract_info(dl_link, download=False)
-        return {'title': r['title'], 'url': r['url']}
+        # return r
+        return {'title': r['title'], 'url': r['url'], 'filename': r['title'] + '.mp3'}
